@@ -74,7 +74,7 @@ python3 train_dual.py \
   --img 1280 \
   --cfg models/detect/yolov9-s.yaml \
   --weights '' \
-  --name yolov9-c \
+  --name yolov9-s \
   --hyp hyp.scratch-high.yaml \
   --min-items 0 \
   --epochs 50 \
