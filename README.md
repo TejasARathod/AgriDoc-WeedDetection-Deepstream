@@ -2,6 +2,10 @@
 
 This repository implements an end-to-end object detection pipeline using **YOLOv9** and **DeepStream 7.0** for weed detection in agricultural fields. The predictions are stored in a **PostgreSQL** database and connected to **Grafana** for real-time data visualization and analysis.
 
+<p align="center">
+  <img src="https://github.com/TejasARathod/AgriDoc-WeedDetection-Deepstream/blob/13ffdafe6cdc202d9b23ffd8236fd0a07e5b4baf/Architecture.png?raw=true" width="700" />
+</p>
+
 ---
 
 ## 📚 Table of Contents
@@ -14,6 +18,7 @@ This repository implements an end-to-end object detection pipeline using **YOLOv
 * [🚀 DeepStream Deployment](#-deepstream-deployment)
 * [💃 Kafka & PostgreSQL Integration](#-kafka--postgresql-integration)
 * [📊 Grafana Visualization](#-grafana-visualization)
+* [🎥 Demo Video](#-demo-video)
 * [📄 Citations](#-citations)
 
 ---
@@ -26,7 +31,7 @@ Precision weed detection in agriculture helps optimize herbicide usage and prote
 
 ## 📦 Environment Setup
 
-### 🐳 Docker Container for DeepStream
+### 📃 Docker Container for DeepStream
 
 We use NVIDIA’s DeepStream container for deployment:
 
@@ -132,7 +137,26 @@ PostgreSQL Docs: [Install on Ubuntu](https://www.postgresql.org/download/linux/u
 
 Grafana connects to the PostgreSQL database for dashboard analytics.
 
+<p align="center">
+  <img src="https://github.com/TejasARathod/AgriDoc-WeedDetection-Deepstream/blob/13ffdafe6cdc202d9b23ffd8236fd0a07e5b4baf/Grafana-Dashboard.png?raw=true" width="700" />
+</p>
+
 Grafana Docs: [Install Grafana on Debian/Ubuntu](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
+
+---
+
+## 🎥 Demo Video
+
+<p align="center">
+  <img src="https://github.com/TejasARathod/AgriDoc-WeedDetection-Deepstream/blob/13ffdafe6cdc202d9b23ffd8236fd0a07e5b4baf/Demo.gif?raw=true" width="600" />
+</p>
+
+**Demo Flow:**
+
+1. Start Kafka Docker container
+2. Start DeepStream pipeline
+3. Start the Python `consumer.py` to log predictions into PostgreSQL
+4. Play the RTSP video stream to trigger inference
 
 ---
 
@@ -162,6 +186,4 @@ Please cite the following works if using this project:
 
 * [YOLOv9 by WongKinYiu](https://github.com/WongKinYiu/yolov9)
 * [DeepStream-Yolo by marcoslucianops](https://github.com/marcoslucianops/DeepStream-Yolo)
-
-
 
